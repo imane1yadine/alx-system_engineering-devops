@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Use find to list directories (including hidden ones),
+# exclude current directory (.), and parent directory (..),
+# and count the lines.
+count=$(find . -mindepth 1 -maxdepth 1 -type d | wc -l)
+
+# Subtract 2 from the count to exclude "." and ".." directories.
+((count -= 2))
+
+echo "$count"
