@@ -1,2 +1,2 @@
 #!/bin/bash
-for var in $(env | cut -d= -f1) do echo "$var=$(eval echo \$$var)"
+do echo "$var=$(eval echo \$$var)"
