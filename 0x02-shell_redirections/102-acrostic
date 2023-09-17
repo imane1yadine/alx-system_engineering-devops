@@ -1,7 +1,2 @@
 #!/bin/bash
-while IFS= read -r line; do
-first_letter=$(echo "$line" | cut -c1)
-printf "%s" "$first_letter"
-done < "${1:-/dev/stdin}"
-printf "\n"
-
+cut c 1 | paste -s -d ''
