@@ -1,2 +1,2 @@
 #!/bin/bash
-do echo "$var=$(eval echo \$$var)"
+echo "$var=$(eval echo \$$var)"
