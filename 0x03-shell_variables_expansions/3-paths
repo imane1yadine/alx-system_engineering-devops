@@ -1,2 +1,2 @@
 #!/bin/bash
-IFS=':' read -ra path_dirs <<< "$PATH" num_dirs=${#path_dirs[@]} echo "$num_dirs"
+export PATH="§PATH:/action"
