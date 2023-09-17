@@ -1,2 +1,2 @@
 #!/bin/bash
-$(printenv | sort) do echo "$variable" done
+for var in $(env | cut -d= -f1) do echo "$var=$(eval echo \$$var)"
