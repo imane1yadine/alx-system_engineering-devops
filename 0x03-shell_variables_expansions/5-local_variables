@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# List all local variables and their values
+local_vars=$(set | grep -E '^[A-Za-z_][A-Za-z_0-9]*=')
+
+# List all environment variables and their values
+env_vars=$(env)
+
+# List all functions
+functions=$(declare -F | awk '{print $3}')
+
+# Print the results
+echo "Local Variables:"
+echo "$local_vars"
+echo
+echo "Environment Variables:"
+echo "$env_vars"
+echo
+echo "Functions:"
+echo "$functions"
